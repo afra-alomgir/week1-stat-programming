@@ -83,9 +83,9 @@ yrbss <- yrbss %>% mutate(bmi = weight / (height^2))
 
 yrbss %>%
   filter(Grade == 12, Gender == "Female") %>%
-  ggplot(aes(x = physically_active_7d, y = bmi, group = physically_active_7d)) + geom_boxplot() + 
-  labs(x = "Number of Physically Active Days", y = "BMI", title = "Relationship between BMI and Physical Activity Among Females in Grade 12", fill = "Active Days") +
-  theme_bw() 
+  ggplot(aes(x = physically_active_7d, y = bmi, group = physically_active_7d, fill = physically_active_7d)) + geom_boxplot() + 
+  labs(x = "Number of Physically Active Days", y = "BMI", title = "Relationship between BMI \nand Physical Activity Among Females in Grade 12", fill = "Active Days") +
+  theme_bw()
 
 
 # Push your completed code to your GitHub repository
